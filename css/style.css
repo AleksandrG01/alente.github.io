@@ -3351,11 +3351,11 @@ select {
   }
 
   .first__title:before {
-    top: 0;
+    top: -9px;
   }
 
   .first__title:after {
-    bottom: 0;
+    bottom: -9px;
   }
 
   .first__title {
