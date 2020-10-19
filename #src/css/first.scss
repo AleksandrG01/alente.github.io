@@ -1,0 +1,152 @@
+.first {
+   background: url("../img/main_image.png");
+   @media (max-width: $md3+px) {
+      background: #323232;
+      background-image: none;
+   }
+   min-height: 444px;
+   &__container {
+
+   }
+
+   &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: $md2+px) {
+         margin: 112px 0px 0px 0px;
+         flex-wrap: wrap;
+      }
+      @media (max-width: $md3+px) {
+         margin: 0;
+         flex-wrap: wrap;
+      }
+   }
+
+   &__title {
+      min-width: 500px;
+
+      text-align: center;
+      position: relative;
+      &:before {
+          content: '';
+          position: absolute;
+          width: 161px;
+          height: 3px;
+          display: block;
+          background: #fff;
+          top: -36px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          @media (max-width: $md2+px) {
+            top: -15px;
+         }
+          @media (max-width: $md3+px) {
+            top: -9px;
+          }
+      }
+      &:after {
+         content: '';
+         position: absolute;
+         width: 161px;
+         height: 3px;
+         display: block;
+         background: #fff;
+         bottom: -45px;
+         left: 50%;
+         transform: translate(-50%, 0);
+         @media (max-width: $md2+px) {
+            bottom: -15px;
+         }
+         @media (max-width: $md3+px) {
+            bottom: -9px;
+         }
+          
+      }
+      @media (max-width: $md3+px) {
+      margin: 30px 0px 0px 0px;
+      width: 100%;
+      min-width: auto;
+      }
+      @media (max-width: $md4+px) {
+         font-size: 29px;
+      }
+   }
+
+   &__title-title {
+      font-family: ProximaNova-Regular, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 54px;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      @media (max-width: $md4+px) {
+         font-size: 29px;
+      }
+   }
+
+   &__title-subtitle {
+
+      font-family: ProximaNova-Bold, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 54px;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      @media (max-width: $md4+px) {
+         font-size: 29px;
+      }
+   }
+
+   &__title-subsubtitle {
+      font-family: ProximaNova-Bold, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 54px;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      @media (max-width: $md4+px) {
+         font-size: 29px;
+      }
+   }
+
+   &__image {
+      margin: 6px 0 0 87px;
+      @media (max-width: $md2+px) {
+      margin: 25px 0px 0px 0px;
+      }
+      @media (max-width: $md3+px) {
+         display: block;
+         }
+      @media (max-width: $md3+px) {
+         margin: 0;
+      }
+      & img {
+         @media (max-width: $md2+px) {
+            width: 100%;
+            margin: 0;
+         }
+         @media (max-width: $md3+px) {
+            width: 100%;
+            margin: 30px 0px -4px 0px;
+         }
+      }
+   }
+}
+.section {
+}
+.webp .first.section {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   @media (max-width: $md3+px) {
+      background: #323232;
+      background-image: none;
+   }
+}

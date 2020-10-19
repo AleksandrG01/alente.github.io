@@ -1,0 +1,258 @@
+/**
+ * Tabs
+ */
+ .tabs {
+	display: flex;
+   flex-wrap: wrap; // make sure it wraps
+   justify-content: space-between;
+   @media (max-width: $md2+px) {
+      justify-content: center;
+   }
+}
+.tabs label {
+	order: 1; // Put the labels first
+	display: block;
+	padding: 15px;
+   margin: 34px 0px;
+   position: relative;
+	cursor: pointer;
+   border: 2px solid transparent;
+  font-weight: bold;
+  font-family: ProximaNova-Extrabld, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 43px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+    &:hover {
+       border: 2px solid #B98348;
+       color: #B98348;
+    }
+    @media (max-width: $md2+px) {
+      margin: 4px 0px;
+    }
+   @media (max-width: $md3+px) {
+      padding: 6px;
+      margin: 0;
+      line-height: 1.2;
+      border-bottom: 1px solid #dfdfdf;
+      &:after {
+         content: '';
+         width: 15px;
+         height: 15px;
+         display: block;
+         position: absolute;
+         right: 7px;
+         top: 7px;
+         background: url("../img/arrowdsvg.svg") 0 0 no-repeat;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
+   }
+
+}
+.tabs .tab {
+  order: 99; // Put the tabs last
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+    border: 2px solid #B98348;
+    color: #B98348;
+    
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+@media (max-width: 767px) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+
+.tab {
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: $md3+px) {
+         flex-wrap: wrap;
+      }
+   }
+
+   &__items {
+      width: 328px;
+      height: 328px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 4px;
+      padding: 0 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+   }
+
+   &__items-block {
+      text-align: center;
+      position: relative;
+   }
+   &__blog a{
+      position: absolute;
+      right: -5px;
+      text-decoration: none;
+      top: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      width: 75px;
+      height: 30px;
+      text-align: center;
+      background: #b98348;
+      &:before {
+         content: "";
+         border: 8px solid transparent;
+         border-bottom: 0px solid transparent;
+         right: -1px;
+         transform: rotateX(132deg);
+         position: absolute;
+         bottom: -6px;
+         border-right: 0px solid transparent;
+         border-left: 6px solid #8d6539;
+     }
+  }
+
+   &__title {
+      font-family: ProximaNova-Bold, sans-serif;
+      font-size: 22px;
+      line-height: 30px;
+      color: #fff;
+      text-transform: uppercase;
+   }
+
+   &__subtitle {
+      font-family: Georgia, sans-serif;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 30px;
+      color: #fff;
+      & span {
+         position: relative;
+
+      }
+      & span:before {
+         content: '';
+         width: 41px;
+         height: 2px;
+         display: block;
+         position: absolute;
+         right: 27px;
+         top: 13px;
+         background: #fff;
+          
+      }
+      & span:after {
+         content: '';
+         width: 41px;
+         height: 2px;
+         display: block;
+         position: absolute;
+         left: 27px;
+         top: 13px;
+         background: #fff;
+          
+      }
+   }
+
+   &__desk {
+      font-family: ProximaNova-Semibold, sans-serif;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 17px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 20px 0px 0px 0px;
+   }
+
+   &__date {
+      font-family: ProximaNova-Bold, sans-serif;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 17px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 20px 0px 0px 0px;
+      position: relative;
+      &:before {
+         content: '';
+         width: 209px;
+         height: 2px;
+         display: block;
+         position: absolute;
+         left: 50%;
+         top: -9px;
+         background: #fff;
+         transform: translateX(-50%);
+      }
+      &:after {
+         content: '';
+         width: 209px;
+         height: 2px;
+         display: block;
+         position: absolute;
+         left: 50%;
+         bottom: -9px;
+         background: #fff;
+         transform: translateX(-50%);
+      }
+   }
+
+   &__desk-block {
+      padding: 10px;
+      background-color: #c38f66bf;
+      color: #fff;
+      font-family: ProximaNova-Bold, sans-serif;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 30px;
+      color: #fff;
+      text-transform: uppercase;
+   }
+   &__button a {
+      font-family: Georgia, sans-serif;
+      margin: 26px 0px 0px 0px;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 30px;
+      color: #fff;
+      padding: 18px;
+      border: 1px solid #fff;
+      width: 229px;
+      text-transform: uppercase;
+      display: block;
+      text-decoration: none;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         background: #000;
+      }
+   }
+}
+
